@@ -1,4 +1,4 @@
-package com.gproject.FirstPorject.entities;
+package com.gproject.departmentspring.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,15 +15,12 @@ public class Department {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	
-	
+
 	
 	public Department() {
 		
 	}
 
-	
-	
 	public Long getId() {
 		return id;
 	}

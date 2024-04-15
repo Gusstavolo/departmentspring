@@ -1,4 +1,4 @@
-package com.gproject.FirstPorject.entities;
+package com.gproject.departmentspring.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_User")
+@Table(name = "tb_user")
 public class User {
 	
 	@Id
@@ -21,6 +21,7 @@ public class User {
 
 	@ManyToOne
 	@JoinColumn(name = "department_id")
+	
 	private Department departmant;
 	
 	public User() {
