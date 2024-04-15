@@ -11,18 +11,16 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tb_user")
 public class User {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private Long id;
 	private String name;
 	private String email;
-
+	
 	@ManyToOne
 	@JoinColumn(name = "department_id")
-	
-	private Department departmant;
+	private Department department;
 	
 	public User() {
 	}
@@ -51,12 +49,11 @@ public class User {
 		this.email = email;
 	}
 
-	public Department getDepartmant() {
-		return departmant;
+	public Department getDepartment() {
+		return department;
 	}
 
-	public void setDepartmant(Department departmant) {
-		this.departmant = departmant;
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
-	
 }
